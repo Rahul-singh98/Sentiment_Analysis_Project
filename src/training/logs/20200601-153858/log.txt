@@ -1,0 +1,30 @@
+Training on Epoch 0 
+Average loss: 1.283800721168518 
+Average accuracy: 0.34975961538461536 
+F1 score: 0.3492584697175504 
+
+              precision    recall  f1-score   support
+
+           0       0.35      0.37      0.36       559
+           1       0.34      0.37      0.35       556
+           2       0.36      0.31      0.33       549
+
+    accuracy                           0.35      1664
+   macro avg       0.35      0.35      0.35      1664
+weighted avg       0.35      0.35      0.35      1664
+*************************
+Validation on Epoch 0 
+Average loss: 1.0350432395935059 
+Average accuracy: 0.4921875 
+F1 score 0.461581856893065 
+
+              precision    recall  f1-score   support
+
+           0       0.52      0.29      0.37        38
+           1       0.42      0.30      0.35        43
+           2       0.51      0.83      0.63        47
+
+    accuracy                           0.49       128
+   macro avg       0.49      0.47      0.45       128
+weighted avg       0.48      0.49      0.46       128
+==================================================

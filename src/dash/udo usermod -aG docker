@@ -1,0 +1,19 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Tue 2020-06-02 10:26:23 IST; 49s ago
+     Docs: https://docs.docker.com
+ Main PID: 14477 (dockerd)
+    Tasks: 10
+   CGroup: /system.slice/docker.service
+           └─14477 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Jun 02 10:26:08 rahul dockerd[14477]: time="2020-06-02T10:26:08.767354977+05:30" level=warning msg="Your kernel does not support swap memory limit"
+Jun 02 10:26:08 rahul dockerd[14477]: time="2020-06-02T10:26:08.767402114+05:30" level=warning msg="Your kernel does not support cgroup rt period"
+Jun 02 10:26:08 rahul dockerd[14477]: time="2020-06-02T10:26:08.767421039+05:30" level=warning msg="Your kernel does not support cgroup rt runtime"
+Jun 02 10:26:08 rahul dockerd[14477]: time="2020-06-02T10:26:08.767705958+05:30" level=info msg="Loading containers: start."
+Jun 02 10:26:10 rahul dockerd[14477]: time="2020-06-02T10:26:10.249302907+05:30" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Jun 02 10:26:12 rahul dockerd[14477]: time="2020-06-02T10:26:12.717824892+05:30" level=info msg="Loading containers: done."
+Jun 02 10:26:21 rahul dockerd[14477]: time="2020-06-02T10:26:21.294665499+05:30" level=info msg="Docker daemon" commit=42e35e61f3 graphdriver(s)=overlay2 version=19.03.11
+Jun 02 10:26:21 rahul dockerd[14477]: time="2020-06-02T10:26:21.294886942+05:30" level=info msg="Daemon has completed initialization"
+Jun 02 10:26:23 rahul dockerd[14477]: time="2020-06-02T10:26:23.599551195+05:30" level=info msg="API listen on /var/run/docker.sock"
+Jun 02 10:26:23 rahul systemd[1]: Started Docker Application Container Engine.
