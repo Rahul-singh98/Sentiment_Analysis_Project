@@ -396,11 +396,11 @@ if __name__ == "__main__":
     parser.add_argument('--log_f1', type=int, default=1, choices=[0, 1])
     parser.add_argument('--flush_history', type=int,default=1, choices=[0, 1])
     parser.add_argument('--output', type=str, default='./models/')
-    parser.add_argument('--model_name', type=str, default='')
+    parser.add_argument('--model_name', type=str, default='en_trustpilot')
 
     args = parser.parse_args()
     run(args)
 
 
 
-# python train.py --data_path /home/rahul/my_project_dir/python_learning/start_to_end_machine_learning/Scraping/scrapy/trustpilot/comments_trustpilot.csv --validation_split 0.1 --label_column rating --text_column comment --max_length 1014 --dropout_input 0 --group_labels 1  --balance 1 --ignore_center 0 --model_name en_trustpilot --log_every 250
+# python train.py --data_path ../Scraping/scrapy/trustpilot/comments_trustpilot.csv --validation_split 0.1 --label_column rating --text_column comment --max_length 1014 --dropout_input 0 --group_labels 1  --balance 1 --ignore_center 0 --model_name en_trustpilot --log_every 250

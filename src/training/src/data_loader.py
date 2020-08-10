@@ -29,6 +29,7 @@ def load_data(args):
                          sep=args.sep)
     texts = []
     labels = []
+    
     for df_chunk in tqdm(chunks):
         aux_df = df_chunk.copy()
         aux_df = aux_df.sample(frac=1)

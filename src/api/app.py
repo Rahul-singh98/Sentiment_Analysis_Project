@@ -11,8 +11,8 @@ import wget
 
 import db
 import config
-from ml.model import CharacterLevelCNN
-from ml.utils import predict_sentiment
+from ML.model import CharacterLevelCNN
+from ML.utils import predict_sentiment
 
 app = Flask(__name__)
 api = Blueprint('api', __name__)
@@ -22,15 +22,6 @@ model_name = 'model_en.pth'
 model_path = f'./ML/models/{model_name}'
 model = CharacterLevelCNN()
 
-
-if model_name not in os.listdir('./ML/models/'):
-    print(f'downloading the trained model {model_name}')
-    wget.download(
-        "https://github.com/ahmedbesbes/character-based-cnn/releases/download/model_en_tp_amazon/model_tp_amazon_1014.pth",
-        out=model_path
-    )
-else:
-    print('model already saved to api/ml/models')
 
 if torch.cuda.is_available():
     trained_weights = torch.load(model_path)
