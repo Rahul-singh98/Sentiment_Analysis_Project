@@ -17,7 +17,7 @@ external_stylesheets = [
     'https://fonts.googleapis.com/css?family=Roboto&display=swap'
 ]
 
-external_script = "https://raw.githubusercontent.com/MarwanDebbiche/post-tuto-deployment/master/src/dash/assets/gtag.js"
+external_script ="./gtags.js"
 
 app = dash.Dash(
     __name__, 
@@ -32,7 +32,7 @@ app.scripts.append_script({
     "external_url": external_script
 })
 
-app.title = 'Reviews AI2Prod'
+app.title = 'Reviews App'
 
 companies = pd.read_csv('./csv/companies_forbes.csv' , sep = '\t')
 random_reviews = pd.read_csv('./csv/random_reviews.csv')
@@ -162,36 +162,11 @@ home_layout = html.Div(
             className="btn btn-lg btn-secondary btn-block",
             id='switch_button',
             n_clicks_timestamp=0
-        ),
-        html.P(
-            dcc.Link("Go to Admin 🔑", id="admin-link", href="/admin"),
-            className="mt-2"
-
-        ),
-        html.P(
-            [
-                html.A("BESBES", href="https://ahmedbesbes.com", target="_blank"),
-                " / ",
-                html.A("DEBBICHE", href="https://marwandebbiche.com",
-                       target="_blank"),
-                " - 2019"
-            ],
-            className="mt-3 mb-2 text-muted"
-        ),
+        )
     ],
     className="form-review",
 )
 
-admin_layout = html.Div(
-    [
-        html.H1("Admin Page 🔑"),
-        html.Div(id="admin-page-content"),
-        html.P(
-            dcc.Link("Go to Home 🏡", href="/"),
-            style={"marginTop": "20px"}
-        )
-    ]
-)
 
 
 @app.callback(
